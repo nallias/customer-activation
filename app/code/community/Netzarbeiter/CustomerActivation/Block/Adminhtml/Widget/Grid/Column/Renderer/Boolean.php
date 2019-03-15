@@ -23,7 +23,7 @@ class Netzarbeiter_CustomerActivation_Block_Adminhtml_Widget_Grid_Column_Rendere
     public function render(Varien_Object $row)
     {
         $data = (bool) $this->_getValue($row);
-        $value = $data ? 'Yes' : 'No';
+        $value = $data ? Mage::helper('adminhtml')->__('Yes') : Mage::helper('adminhtml')->__('No');
         return $this->__($value);
     }
 }
